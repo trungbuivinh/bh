@@ -12,7 +12,7 @@
         overflow: hidden;
         text-align: center;
         background-color: #000;
-        font-family: 'Roboto Condensed', sans-serif;
+        font-family: cursive;
     }
     canvas {
         width: 100%;
@@ -27,13 +27,36 @@
         opacity: 0.5;
         bottom: 24px;
     }
+    .glow {
+  text-align: center;
+  font-size:12px;
+  color: #fff;
+  animation: glow 0.5s ease-in-out infinite alternate;
+	position:absolute;
+    width:300px;
+    height:300px;
+    bottom:-200px;
+    right:25%;
+    left:50%;
+    margin-left:-150px;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}
     </style>
 </head>
 <body>
 <script src="https://cdn.jsdelivr.net/npm/three@0.100.0/build/three.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/three@0.100.0/examples/js/controls/OrbitControls.js"></script>
 
-<div class="footer">
+<div class="glow">
     Anh Chung ♥ Pé Chinh
 </div>
 <script>
